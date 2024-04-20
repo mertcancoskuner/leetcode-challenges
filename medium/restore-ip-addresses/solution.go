@@ -11,9 +11,9 @@ func generateIP(result *[]string, s string, start int, step int, ip string) {
         *result = append(*result, ip[:len(ip)-1])
         return
     }
-	if start == len(s) || step == 4 {
+    if start == len(s) || step == 4 {
 		return
-	}
+    }
     for i := start; i < start + 3 && i < len(s); i++ {
 		part := s[start:i+1]
 		if isValid(part) {
